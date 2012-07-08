@@ -15,16 +15,16 @@
       collapsed : true
     };
 
-      var options = $.extend(true, config, opts);
+    var options = $.extend(true, config, opts);
 
-      this.each( function () {
-        $el = $(this);
-        $iframe = $('<iframe src="http://yacc.meteor.com/' + options.room +'" style></iframe>').css({
-          width : $el.width(),
-          height : $el.height()
-        });
-        $el.html($iframe);
+    this.each( function () {
+      $el = $(this);
+      $iframe = $('<iframe src="http://yacc.meteor.com/' + options.room +'" style></iframe>').css({
+        width : $el.width(),
+        height : $el.height()
       });
+      $el.html($iframe);
+    });
 
     return this;
   };
