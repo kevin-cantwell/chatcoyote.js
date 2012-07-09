@@ -21,7 +21,8 @@
       $el = $(this);
       $iframe = $('<iframe src="http://yacc.meteor.com/chat?room=' + options.room +'&href=' + options.href + '"></iframe>').css({
         width : $el.width(),
-        height : $el.height()
+        height : $el.height(),
+        border : 'none'
       });
       $el.html($iframe);
     });
