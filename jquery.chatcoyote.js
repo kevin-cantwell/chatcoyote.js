@@ -3,23 +3,23 @@
   /*
    * Usage: 
    * $('#somediv').chatcoyote({
-   *   css : someCssThatYouWantAppliedInternallyToTheChatIframe,
-   *   collapsed : initializeInTheCollapsedPosition
+   *   room : 'My Room',
+   *   href : 'http://www.siteworthtalkingabout.com/important-page'
    * });
+   *
    */
   $.fn.chatcoyote = function (opts) {
 
     var config = {
-      room : window.location.href,
-      css : undefined,
-      collapsed : true
+      room : '',
+      href : window.location.href
     };
 
     var options = $.extend(true, config, opts);
 
     this.each( function () {
       $el = $(this);
-      $iframe = $('<iframe src="http://yacc.meteor.com/' + options.room +'" style></iframe>').css({
+      $iframe = $('<iframe src="http://localhost:3000/chat?room=' + options.room +'&href=' + options.href + '"></iframe>').css({
         width : $el.width(),
         height : $el.height()
       });
