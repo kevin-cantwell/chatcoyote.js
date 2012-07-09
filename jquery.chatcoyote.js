@@ -19,7 +19,7 @@
 
     this.each( function () {
       $el = $(this);
-      $iframe = $('<iframe src="http://localhost:3000/chat?room=' + options.room +'&href=' + options.href + '"></iframe>').css({
+      $iframe = $('<iframe src="http://yacc.meteor.com/chat?room=' + options.room +'&href=' + options.href + '"></iframe>').css({
         width : $el.width(),
         height : $el.height()
       });
